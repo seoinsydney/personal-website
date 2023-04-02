@@ -1,0 +1,49 @@
+.slugContainer {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    h1 {
+        margin: 50px 0;
+    }
+    img {
+        object-fit: cover;
+    }
+    p {
+        line-height: 1.8;
+        font-weight: normal;
+        span {
+            font-size: 16px;
+            color:#a2a2a2;
+            margin-right: 20px;
+        }
+    }
+    a {
+        color:#70b7d9;
+        text-decoration: underline;
+    }
+    .tagFlex {
+        display: flex;
+    }
+    .projectDetails {
+        margin: 30px 0;
+    }
+    .goBack {
+        text-align: right;
+        button {
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            background-color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .slugContainer {
+      padding: 10px;
+      img {
+        width: 100%;
+        }
+    }
+}
