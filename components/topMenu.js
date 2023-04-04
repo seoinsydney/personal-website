@@ -21,11 +21,11 @@ export default function TopMenu () {
                     <li>
                         <Link href="/about">About</Link>
                     </li>
-                    {/* <li>
-                        <Link href="/blog">Blog</Link>
-                    </li> */}
                     <li>
-                        <Link href="/projects">Projects</Link>
+                        <Link href="/blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link href="/project">Project</Link>
                     </li>
                     {/* <li>
                         <Link href="/contact">Contact</Link>
@@ -61,16 +61,12 @@ export default function TopMenu () {
                                 <li>
                                     <Link href="/">Home</Link>
                                 </li>
-                                {/* <li>
-                                    <Link href="/about">About</Link>
-                                </li> */}
-                                {/* <li>
-                                    <Link href="/blog">Blog</Link>
-                                </li> */}
                                 <li>
-                                    <Link href="/projects">Projects</Link>
+                                    <Link href="/blog">Blog</Link>
                                 </li>
-                                
+                                <li>
+                                    <Link href="/project">Project</Link>
+                                </li>
                                 {/* <li>
                                     <Link href="/contact">Contact</Link>
                                 </li> */}

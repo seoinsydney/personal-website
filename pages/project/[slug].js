@@ -2,9 +2,9 @@ import styles from '@/styles/slug.module.scss'
 import SEOHead from '@/components/seoHead';
 import TopMenu from '@/components/topMenu';
 import { GraphQLClient, gql } from 'graphql-request';
-import { useRouter } from 'next/router'
+import GoBackBtn from '@/components/goBackBtn';
 import { Grid } from '@mui/material';
-import { TbArrowBackUp } from "react-icons/tb";
+
 
 const graphCms = new GraphQLClient(
     "https://api-ap-southeast-2.hygraph.com/v2/clfukpdd33m8q01upa9z62of4/master"
@@ -38,7 +38,7 @@ const graphCms = new GraphQLClient(
   const SLUGLIST = gql`
   {
     projects {
-        slug
+      slug
     }
   }
   `
@@ -64,8 +64,6 @@ const graphCms = new GraphQLClient(
   }
 
 export default function ProjectDetails({project}) {
-    console.log(project)
-    const router = useRouter()
     return (
       <>
         <SEOHead />
@@ -88,11 +86,7 @@ export default function ProjectDetails({project}) {
                 }
                 </div>
                 <div className={styles.content} dangerouslySetInnerHTML={{__html: project.richtext.html}}></div>
-                <div className={styles.goBack} >
-                  <button type="button" onClick={() => router.back()}>
-                  <TbArrowBackUp /> Go back
-                  </button>
-              </div>
+                <GoBackBtn />
               </Grid>
             </Grid>
           </div>
