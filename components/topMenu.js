@@ -27,9 +27,9 @@ export default function TopMenu () {
                     <li>
                         <Link href="/project">Project</Link>
                     </li>
-                    {/* <li>
+                    <li>
                         <Link href="/contact">Contact</Link>
-                    </li> */}
+                    </li>
                     <li>
                         <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
                     </li>
@@ -67,9 +67,9 @@ export default function TopMenu () {
                                 <li>
                                     <Link href="/project">Project</Link>
                                 </li>
-                                {/* <li>
+                                <li>
                                     <Link href="/contact">Contact</Link>
-                                </li> */}
+                                </li>
                                 <li>
                                     <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
                                 </li>
