@@ -9,7 +9,6 @@ export default function BlogCard({
     slug,
     pdf,
 }){
-    console.log(blogTitle)
     return(
         <Grid item xs={12} md={6} lg={6}>
             <div className={styles.blogCard}>

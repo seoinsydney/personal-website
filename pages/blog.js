@@ -41,7 +41,6 @@ export async function getStaticProps() {
 
 export default function Blog({blogs}) {
   const reversedBlogs = blogs.reverse();
-  console.log(reversedBlogs)
   return (
     <>
       <SEOHead />

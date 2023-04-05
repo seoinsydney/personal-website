@@ -58,7 +58,6 @@ const graphCms = new GraphQLClient(
   }
 
 export default function BlogDetails({blog}) {
-    console.log(blog)
     return (
       <>
         <SEOHead />
