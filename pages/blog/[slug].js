@@ -58,6 +58,7 @@ const graphCms = new GraphQLClient(
   }
 
 export default function BlogDetails({blog}) {
+  console.log(blog)
     return (
       <>
         <SEOHead />
@@ -79,6 +80,12 @@ export default function BlogDetails({blog}) {
                 </section>
                 <div className={styles.content} 
                 dangerouslySetInnerHTML={{__html: blog.content.html}}></div>
+                {
+                  blog.pdf === undefined || blog.pdf === null ?
+                  <></>
+                  :
+                  <a href="/Accessibility Tests for Websites.pdf" target="blank">Download PDF</a>
+                }
                 <GoBackBtn />
               </Grid>
             </Grid>
