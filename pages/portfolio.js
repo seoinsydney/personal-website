@@ -71,7 +71,10 @@ export default function Projects({projects}) {
               ))
             }
           </Grid>
-          <section>
+
+
+
+          {/* <section>
             <h2>
             Design
             </h2>
@@ -90,7 +93,10 @@ export default function Projects({projects}) {
                 />
               ))
             }
-          </Grid>
+          </Grid> */}
+
+
+
         </div>
       </main>
     </>
