@@ -25,7 +25,7 @@ export default function TopMenu () {
                         <Link href="/blog">Blog</Link>
                     </li>
                     <li>
-                        <Link href="/project">Project</Link>
+                        <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li>
                         <Link href="/contact">Contact</Link>

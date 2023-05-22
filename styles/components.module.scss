@@ -141,9 +141,6 @@
     }
     .text {
         margin: 20px;
-        h5 {
-
-        }
         h6 {
             margin: 15px 0;
         }
@@ -178,10 +175,12 @@
     .skillTag{
         display: flex;
         p {
+            font-size: 14px;
+            border: 1px solid rgb(197, 197, 197);
             border-radius: 28px;
+            padding: 0 10px;
             margin-right: 15px;
-            font-size: 16px;
-            color: #737373;
+            color: #2c2c2c;
         }
     }
 }
@@ -189,6 +188,7 @@
 /* Mobile */
 @media (max-width: 425px) {
     .projectCard {
+        margin-bottom: 20px!important;
         .imgContainer {
             img, .text {
                 width: 100%;
@@ -196,6 +196,17 @@
                 object-fit: cover;
             }
         }
+    }
+    .blogCard {
+        .blogImgContainer {
+            img {
+                height: 170px;
+            }
+        }
+    }
+    .pageContainer {
+        padding: 10px;
+        margin: 0;
     }
 }
 
@@ -213,13 +224,5 @@
                 margin: 60px auto 20px auto;
             }
         }
-    }
-}
-
-/* Mobile */
-@media (max-width: 425px) {
-    .pageContainer {
-        padding: 10px;
-        margin: 0;
     }
 }
