@@ -28,6 +28,9 @@ export default function TopMenu () {
                         <Link href="/portfolio">Portfolio</Link>
                     </li>
                     <li>
+                        <Link href="/design">Design</Link>
+                    </li>
+                    <li>
                         <Link href="/contact">Contact</Link>
                     </li>
                     <li>
@@ -66,6 +69,9 @@ export default function TopMenu () {
                                 </li>
                                 <li>
                                     <Link href="/portfolio">Portfolio</Link>
+                                </li>
+                                <li>
+                                    <Link href="/design">Design</Link>
                                 </li>
                                 <li>
                                     <Link href="/contact">Contact</Link>

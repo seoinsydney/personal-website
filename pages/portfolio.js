@@ -71,32 +71,6 @@ export default function Projects({projects}) {
               ))
             }
           </Grid>
-
-
-
-          {/* <section>
-            <h2>
-            Design
-            </h2>
-          </section>
-          <Grid container spacing={2} className={styles.cardContainer}>
-            {
-              projects.map((project) => (
-                <ProjectCard 
-                title={project.title}
-                author={project.author} 
-                photo={project.photo} 
-                key={project.id}
-                datePublished={project.datePublished}
-                slug={project.slug}
-                hushtags={project.hushtags}
-                />
-              ))
-            }
-          </Grid> */}
-
-
-
         </div>
       </main>
     </>

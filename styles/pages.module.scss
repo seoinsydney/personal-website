@@ -12,6 +12,23 @@
             line-height: 2.1;
         }
     }
+    .figmaDesign {
+        section {
+            text-align: center;
+        }
+        &__desktop {
+            display: block;
+            margin: auto;
+        }
+        &__tablet {
+            display: none;
+            margin: auto;
+        }
+        &__mobile {
+            display: none;
+            margin: auto;
+        }
+    }
     .contact {
         p {
             span {
@@ -45,6 +62,19 @@
     .pageContainer {
         padding: 10px;
         margin: 0;
+        .figmaDesign {
+            max-width: 800px;
+            margin: auto;
+            &__desktop {
+                display: none;
+            }
+            &__tablet {
+                display: block;
+            }
+            &__mobile {
+                display: none;
+            }
+        }
         .contact {
             img {
                 height: 200px;
@@ -66,6 +96,19 @@
         section {
             p {
                 line-height: 1.8;
+            }
+        }
+        .figmaDesign {
+            max-width: 800px;
+            margin: auto;
+            &__desktop {
+                display: none;
+            }
+            &__tablet {
+                display: none;
+            }
+            &__mobile {
+                display: block;
             }
         }
     }
