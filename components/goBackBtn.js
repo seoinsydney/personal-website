@@ -1,4 +1,4 @@
-import styles from '@/styles/button.module.scss';
+import styles from '@/styles/components.module.scss';
 import { TbArrowBackUp } from "react-icons/tb";
 import { useRouter } from 'next/router'
 

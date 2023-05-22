@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/styles/topMenu.module.scss'
+import styles from '@/styles/components.module.scss'
 import { useState } from 'react';
 import { TbMenu2, TbArrowBadgeRight } from "react-icons/tb";
 

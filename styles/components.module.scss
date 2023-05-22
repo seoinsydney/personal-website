@@ -115,3 +115,111 @@
     }
 }
 
+.goBack {
+    text-align: right;
+    button {
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        background-color: inherit;
+        text-decoration: underline;
+    }
+}
+
+.blogCard {
+    margin: 10px;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px #cdcdcd;
+    .blogImgContainer {
+        text-align: center;
+        img {
+            width: 100%;
+            margin: 10px 0;
+            object-fit: cover;
+        }
+    }
+    .text {
+        margin: 20px;
+        h5 {
+
+        }
+        h6 {
+            margin: 15px 0;
+        }
+    }
+}
+
+.projectCard {
+    text-align: center;
+    margin-bottom: 50px!important;
+    .imgContainer {
+        img {
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px #cdcdcd;
+        }
+    }
+    .text {
+        max-width: 365px;
+        margin: auto;
+        text-align: left;
+        h5 {
+            font-weight: 400;
+            font-family: 'Hahmlet', serif;
+        }
+        h6, p {
+            font-weight: 300;
+            height: 30px;
+            line-height: 30px;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    .skillTag{
+        display: flex;
+        p {
+            border-radius: 28px;
+            margin-right: 15px;
+            font-size: 16px;
+            color: #737373;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    .projectCard {
+        .imgContainer {
+            img, .text {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    .blogCard {
+        padding: 10px;
+        margin: 0;
+        .text {
+            margin: 0px;
+        }
+        section {
+            h1 {
+                margin: 60px auto 20px auto;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+    .pageContainer {
+        padding: 10px;
+        margin: 0;
+    }
+}

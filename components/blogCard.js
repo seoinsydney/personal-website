@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/styles/blogCard.module.scss';
+import styles from '@/styles/components.module.scss';
 import { Grid } from '@mui/material';
 
 export default function BlogCard({
