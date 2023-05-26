@@ -22,13 +22,13 @@ export default function TopMenu () {
                         <Link href="/about">About</Link>
                     </li>
                     <li>
-                        <Link href="/blog">Blog</Link>
-                    </li>
-                    <li>
-                        <Link href="/portfolio">Portfolio</Link>
+                        <Link href="/project">Project</Link>
                     </li>
                     <li>
                         <Link href="/design">Design</Link>
+                    </li>
+                    <li>
+                        <Link href="/blog">Blog</Link>
                     </li>
                     <li>
                         <Link href="/contact">Contact</Link>
@@ -65,13 +65,13 @@ export default function TopMenu () {
                                     <Link href="/">Home</Link>
                                 </li>
                                 <li>
-                                    <Link href="/blog">Blog</Link>
-                                </li>
-                                <li>
-                                    <Link href="/portfolio">Portfolio</Link>
+                                    <Link href="/project">Project</Link>
                                 </li>
                                 <li>
                                     <Link href="/design">Design</Link>
+                                </li>
+                                <li>
+                                    <Link href="/blog">Blog</Link>
                                 </li>
                                 <li>
                                     <Link href="/contact">Contact</Link>
