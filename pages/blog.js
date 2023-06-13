@@ -41,6 +41,7 @@ export async function getStaticProps() {
 
 export default function Blog({blogs}) {
   const reversedBlogs = blogs.reverse();
+  // console.log(reversedBlogs)
   return (
     <>
       <SEOHead />
@@ -55,7 +56,7 @@ export default function Blog({blogs}) {
           <Grid container 
           className={styles.blogCardContainer}>
             {
-              blogs.map((blog) => (
+              reversedBlogs.map((blog) => (
                 <BlogCard 
                 blogTitle={blog.blogTitle}
                 coverPhoto={blog.coverPhoto} 

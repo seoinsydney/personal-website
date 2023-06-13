@@ -6,8 +6,7 @@ export default function BlogCard({
     blogTitle,
     coverPhoto, 
     datePublished, 
-    slug,
-    pdf,
+    slug
 }){
     return(
         <Grid item xs={12} md={6} lg={6}>
