@@ -10,6 +10,13 @@ export default function TopMenu () {
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    const links = [
+        { href: "/about", text: "About"},
+        { href: "/project", text: "Project"},
+        { href: "/design", text: "Design"},
+        { href: "/blog", text: "Blog"},
+        { href: "/contact", text: "Contact"}
+    ]
 
     return (
         <div className={styles.topMenu}>
@@ -18,21 +25,13 @@ export default function TopMenu () {
                     <Link href="/"><img src="/JA-logo.png" alt="JA - logo" width="60" height="50" /></Link>
                 </div>
                 <ul>
-                    <li>
-                        <Link href="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link href="/project">Project</Link>
-                    </li>
-                    <li>
-                        <Link href="/design">Design</Link>
-                    </li>
-                    <li>
-                        <Link href="/blog">Blog</Link>
-                    </li>
-                    <li>
-                        <Link href="/contact">Contact</Link>
-                    </li>
+                    {
+                        links.map((list)=> (
+                            <li key={list.href}>
+                                <Link href={list.href}>{list.text}</Link>
+                            </li>
+                        ))
+                    }
                     <li>
                         <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
                     </li>
