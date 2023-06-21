@@ -15,9 +15,9 @@
             li{
                 height: 54px;
                 line-height: 54px;
-                margin-right: 30px;
+                margin-right: 20px;
                 float: right;
-                font-size: 20px;
+                font-size: 18px;
                 transform: rotate(-180deg);
                 a {
                     transition: .3s;
@@ -96,6 +96,23 @@
                         top: 10%;
                     }
                 }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .blogCard {
+        padding-bottom: 10px;
+        margin: 10px;
+        .text {
+            margin: 0px;
+        }
+        section {
+            padding: 0 10px;
+            h1 {
+                margin: 60px auto 20px auto;
             }
         }
     }
@@ -186,22 +203,7 @@
     }
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-    .blogCard {
-        padding-bottom: 10px;
-        margin: 10px;
-        .text {
-            margin: 0px;
-        }
-        section {
-            padding: 0 10px;
-            h1 {
-                margin: 60px auto 20px auto;
-            }
-        }
-    }
-}
+
 
 /* Mobile */
 @media (max-width: 425px) {

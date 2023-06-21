@@ -1,20 +1,15 @@
 .homeContainer {
   max-width: 1200px;
-  margin: auto;
+  margin: 100px auto;
+  .hideMobile {
+    display: block;
+  }
   section {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
+    position: relative;
+    top: 20%;
     margin: auto;
-    background-image: url("/mesmall.png");
-    background-repeat: no-repeat;
-    background-position: right;
     h1, p {
       font-weight: 100;
-      position: relative;
-      top: 35%;
     }
     h1 {
       span {
@@ -28,28 +23,37 @@
       padding-left: 10px;
     }
   }
+  img {
+    width: 100%;
+  }
 }
 .displayMobileHideDesktop {
   display: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .homeContainer  {
+    text-align: center;
+    .hideMobile {
+      display: none;
+    }
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .homeContainer {
     section {
-      position: relative;
-      height: auto;
-      padding: 100px 10px;
-      background-image: none;
+      margin: 50px 10px;
       p {
-        text-align: center;
         font-size: 16px;
       }
     }
   }
   .displayMobileHideDesktop {
     display: block;
-    padding: 50px 10px;
+    padding: 50px 20px;
     section {
       h2 {
         margin: 25px 0;

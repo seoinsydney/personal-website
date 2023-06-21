@@ -1,6 +1,5 @@
 import styles from '@/styles/pages.module.scss'
-import SEOHead from '@/components/seoHead';
-import TopMenu from '@/components/topMenu';
+import Layout from './layout';
 import ProjectCard from 'components/projectCard';
 import { Grid } from '@mui/material';
 import { GraphQLClient, gql } from 'graphql-request';
@@ -45,34 +44,29 @@ const graphcms = new GraphQLClient(
 
 export default function Projects({projects}) {
   return (
-    <>
-      <SEOHead />
-      <main>
-        <TopMenu />
-        <div className={styles.pageContainer}>
-          <section>
-            <h1>
-            Project
-            </h1>
-            {/* <h2>Project</h2> */}
-          </section>
-          <Grid container spacing={2} className={styles.cardContainer}>
-            {
-              projects.map((project) => (
-                <ProjectCard 
-                title={project.title}
-                author={project.author} 
-                photo={project.photo} 
-                key={project.id}
-                datePublished={project.datePublished}
-                slug={project.slug}
-                hushtags={project.hushtags}
-                />
-              ))
-            }
-          </Grid>
-        </div>
-      </main>
-    </>
+    <Layout>
+      <div className={styles.pageContainer}>
+        <section>
+          <h1>
+          Project
+          </h1>
+        </section>
+        <Grid container spacing={2} className={styles.cardContainer}>
+          {
+            projects.map((project) => (
+              <ProjectCard 
+              title={project.title}
+              author={project.author} 
+              photo={project.photo} 
+              key={project.id}
+              datePublished={project.datePublished}
+              slug={project.slug}
+              hushtags={project.hushtags}
+              />
+            ))
+          }
+        </Grid>
+      </div>
+    </Layout>
   )
 }

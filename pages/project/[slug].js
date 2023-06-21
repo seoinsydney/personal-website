@@ -1,6 +1,5 @@
 import styles from '@/styles/slug.module.scss'
-import SEOHead from '@/components/seoHead';
-import TopMenu from '@/components/topMenu';
+import Layout from './../layout';
 import { GraphQLClient, gql } from 'graphql-request';
 import GoBackBtn from '@/components/goBackBtn';
 import { Grid } from '@mui/material';
@@ -65,32 +64,28 @@ const graphCms = new GraphQLClient(
 
 export default function ProjectDetails({project}) {
     return (
-      <>
-        <SEOHead />
-        <main>
-          <TopMenu />
-          <div className={styles.slugContainer}>
-            <h1>Project</h1>
-            <Grid container className={styles.projectDetails}>
-              <Grid item xs={12} md={6} lg={6}>
-                <img src={project.photo[0].url} alt={project.title + 'cover photo'} width={500} height={350} />
-              </Grid>
-              <Grid item xs={12} md={6} lg={6}>
-                <h2>{project.title}</h2>
-                <p><span>{project.datePublished}</span></p>
-                <div className={styles.tagFlex} >
-                {
-                  project.hushtags.map((tag) => (
-                    <p key={tag.id}><span>{tag.tag}</span></p>
-                  ))
-                }
-                </div>
-                <div className={styles.content} dangerouslySetInnerHTML={{__html: project.richtext.html}}></div>
-                <GoBackBtn />
-              </Grid>
+      <Layout>
+        <div className={styles.slugContainer}>
+          <h1>Project</h1>
+          <Grid container className={styles.projectDetails}>
+            <Grid item xs={12} md={6} lg={6}>
+              <img src={project.photo[0].url} alt={project.title + 'cover photo'} width={500} height={350} />
             </Grid>
-          </div>
-        </main>
-      </>
+            <Grid item xs={12} md={6} lg={6}>
+              <h2>{project.title}</h2>
+              <p><span>{project.datePublished}</span></p>
+              <div className={styles.tagFlex} >
+              {
+                project.hushtags.map((tag) => (
+                  <p key={tag.id}><span>{tag.tag}</span></p>
+                ))
+              }
+              </div>
+              <div className={styles.content} dangerouslySetInnerHTML={{__html: project.richtext.html}}></div>
+              <GoBackBtn />
+            </Grid>
+          </Grid>
+        </div>
+      </Layout>
     )
 }

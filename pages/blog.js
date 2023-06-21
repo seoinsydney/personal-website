@@ -1,6 +1,5 @@
 import styles from '@/styles/pages.module.scss'
-import SEOHead from '../components/seoHead';
-import TopMenu from '../components/topMenu';
+import Layout from './layout';
 import BlogCard from 'components/blogCard';
 import { Grid } from '@mui/material';
 import { GraphQLClient, gql } from 'graphql-request';
@@ -43,32 +42,28 @@ export default function Blog({blogs}) {
   const reversedBlogs = blogs.reverse();
   console.log(reversedBlogs)
   return (
-    <>
-      <SEOHead />
-      <main>
-        <TopMenu />
-        <div className={styles.pageContainer}>
-          <section>
-            <h1>
-            Blog
-            </h1>
-          </section>
-          <Grid container 
-          className={styles.blogCardContainer}>
-            {
-              reversedBlogs.map((blog) => (
-                <BlogCard 
-                blogTitle={blog.blogTitle}
-                coverPhoto={blog.coverPhoto} 
-                key={blog.id}
-                datePublished={blog.datePublished}
-                slug={blog.slug}
-                />
-              ))
-            }
-          </Grid>
-        </div>
-      </main>
-    </>
+    <Layout>
+      <div className={styles.pageContainer}>
+        <section>
+          <h1>
+          Blog
+          </h1>
+        </section>
+        <Grid container 
+        className={styles.blogCardContainer}>
+          {
+            reversedBlogs.map((blog) => (
+              <BlogCard 
+              blogTitle={blog.blogTitle}
+              coverPhoto={blog.coverPhoto} 
+              key={blog.id}
+              datePublished={blog.datePublished}
+              slug={blog.slug}
+              />
+            ))
+          }
+        </Grid>
+      </div>
+    </Layout>
   )
 }

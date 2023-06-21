@@ -1,6 +1,5 @@
 import styles from '@/styles/slug.module.scss'
-import SEOHead from '@/components/seoHead';
-import TopMenu from '@/components/topMenu';
+import Layout from './../layout';
 import GoBackBtn from '@/components/goBackBtn';
 import { GraphQLClient, gql } from 'graphql-request';
 import { Grid } from '@mui/material';
@@ -59,31 +58,27 @@ const graphCms = new GraphQLClient(
 
 export default function BlogDetails({blog}) {
     return (
-      <>
-        <SEOHead />
-        <main>
-          <TopMenu />
-          <div className={`${styles.slugContainer} ${styles.slugBlog}`}
-          >
-            <h1>Blog</h1>
-            <Grid container className={styles.blogDetails}>
-              <Grid item xs={12} md={12} lg={12}>
-                <img src={blog.coverPhoto.url} 
-                alt={blog.blogTitle + 'cover photo'} 
-                width={500} height={350} />
-              </Grid>
-              <Grid item xs={12} md={12} lg={12}>
-                <section>
-                  <h2>{blog.blogTitle}</h2>
-                  <p><span>{blog.datePublished}</span></p>
-                </section>
-                <div className={styles.content} 
-                dangerouslySetInnerHTML={{__html: blog.content.html}}></div>
-                <GoBackBtn />
-              </Grid>
+      <Layout>
+        <div className={`${styles.slugContainer} ${styles.slugBlog}`}
+        >
+          <h1>Blog</h1>
+          <Grid container className={styles.blogDetails}>
+            <Grid item xs={12} md={12} lg={12}>
+              <img src={blog.coverPhoto.url} 
+              alt={blog.blogTitle + 'cover photo'} 
+              width={500} height={350} />
             </Grid>
-          </div>
-        </main>
-      </>
+            <Grid item xs={12} md={12} lg={12}>
+              <section>
+                <h2>{blog.blogTitle}</h2>
+                <p><span>{blog.datePublished}</span></p>
+              </section>
+              <div className={styles.content} 
+              dangerouslySetInnerHTML={{__html: blog.content.html}}></div>
+              <GoBackBtn />
+            </Grid>
+          </Grid>
+        </div>
+      </Layout>
     )
 }

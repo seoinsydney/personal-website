@@ -2,32 +2,35 @@ import Link from 'next/link';
 import styles from '@/styles/components.module.scss'
 import { useState } from 'react';
 import { TbMenu2, TbArrowBadgeRight } from "react-icons/tb";
-
+// import { usePathname } from "next/navigation"
 
 export default function TopMenu () {
 
+    // const path = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     const links = [
-        { href: "/about", text: "About"},
-        { href: "/project", text: "Project"},
-        { href: "/design", text: "Design"},
-        { href: "/blog", text: "Blog"},
-        { href: "/contact", text: "Contact"}
+        { id: 1, href: "/about", text: "About"},
+        { id: 2, href: "/project", text: "Project"},
+        { id: 3, href: "/design", text: "Design"},
+        { id: 4, href: "/blog", text: "Blog"},
+        { id: 5, href: "/contact", text: "Contact"}
     ]
 
     return (
         <div className={styles.topMenu}>
             <nav className={styles.desktopMenu}>
                 <div className={styles.logo}>
-                    <Link href="/"><img src="/JA-logo.png" alt="JA - logo" width="60" height="50" /></Link>
+                    <Link href="/">
+                        <img src="/JA-logo.png" alt="JA - logo" width="60" height="50" />
+                    </Link>
                 </div>
                 <ul>
                     {
-                        links.map((list)=> (
-                            <li key={list.href}>
+                        links.map((list) => (
+                            <li key={list.id}>
                                 <Link href={list.href}>{list.text}</Link>
                             </li>
                         ))
