@@ -28,13 +28,13 @@ export default function Home() {
           </Grid>
       </Grid>
 
-      {/* <div className={styles.displayMobileHideDesktop}>
+      <div className={styles.displayMobileHideDesktop}>
         <section>
           <h2>About me.</h2>
           <p>
             Hi there!
             <br />
-            I am a Frontend Developer with 2 years of experience, passionate about creating intuitive and efficient user interfaces using React.
+            I am a Frontend Developer with a couple of years of experience, passionate about creating intuitive and efficient user interfaces using React.
             <br />
             I have hands-on experience in building interactive components, implementing state management, and integrating APIs with the application. I am also proficient in working with React hooks and functional components, which help me write clean and reusable code.
             <br />
@@ -45,7 +45,7 @@ export default function Home() {
             I am a highly motivated React Developer, ready to take on new challenges and contribute to building innovative and user-friendly applications.
           </p>
         </section>
-      </div> */}
+      </div>
 
       </div>
     </Layout>

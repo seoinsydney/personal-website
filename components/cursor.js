@@ -40,6 +40,7 @@ const CursorEffect = () => {
         width: '150px',
         borderRadius: '50%',
         pointerEvents: 'none',
+        zIndex: 1,
       },
       exit: {
         opacity: 0,
