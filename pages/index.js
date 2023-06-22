@@ -28,7 +28,7 @@ export default function Home() {
           </Grid>
       </Grid>
 
-      <div className={styles.displayMobileHideDesktop}>
+      {/* <div className={styles.displayMobileHideDesktop}>
         <section>
           <h2>About me.</h2>
           <p>
@@ -45,7 +45,7 @@ export default function Home() {
             I am a highly motivated React Developer, ready to take on new challenges and contribute to building innovative and user-friendly applications.
           </p>
         </section>
-      </div>
+      </div> */}
 
       </div>
     </Layout>
