@@ -3,10 +3,12 @@ import Layout from './layout';
 import { Grid } from '@mui/material';
 
 export default function Home() {
+
   return (
     <Layout>
-      <Grid container className={styles.homeContainer}>
-          <Grid item xs={12} md={6} lg={6}>
+      <div className={styles.homeContainer}>
+      <Grid container className={styles.home}>
+          <Grid item xs={12} md={5} lg={5}>
             <section>
               <h1>
               Hi, <br />
@@ -19,14 +21,14 @@ export default function Home() {
               <p>CMS /  UI/UX Design / SEO</p>
             </section>
           </Grid>
-          <Grid item xs={12} md={6} lg={6} 
+          <Grid item xs={12} md={7} lg={7} 
           className={styles.hideMobile}
           >
-            <img src="/mesmall2.png" alt="" />
+            <img src="/developer.png" alt="photo of me" />
           </Grid>
       </Grid>
 
-      <div className={styles.displayMobileHideDesktop}>
+      {/* <div className={styles.displayMobileHideDesktop}>
         <section>
           <h2>About me.</h2>
           <p>
@@ -43,6 +45,8 @@ export default function Home() {
             I am a highly motivated React Developer, ready to take on new challenges and contribute to building innovative and user-friendly applications.
           </p>
         </section>
+      </div> */}
+
       </div>
     </Layout>
   )

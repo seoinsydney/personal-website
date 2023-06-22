@@ -1,5 +1,7 @@
 import styles from '@/styles/pages.module.scss'
 import Layout from './layout';
+import { Grid } from '@mui/material';
+// import { motion, AnimatePresence } from "framer-motion"
 
 export default function About() {
   return (
@@ -9,20 +11,31 @@ export default function About() {
           <h1>
           About Me
           </h1>
-          <p>
-            Hi there!
-            <br />
-            I am a Frontend Developer with 2 years of experience, passionate about creating intuitive and efficient user interfaces using React.
-            <br />
-            I have hands-on experience in building interactive components, implementing state management, and integrating APIs with the application. I am also proficient in working with React hooks and functional components, which help me write clean and reusable code.
-            <br />
-            Apart from technical skills, I believe in being a team player and have actively contributed to the success of the projects I have worked on. I am comfortable working in an agile environment and have experience in collaborating with designers and other developers to deliver high-quality code.
-            <br />
-            I am always eager to learn and stay updated with the latest developments in the React ecosystem. I am currently exploring the use of Next.js, GraphQL and other front-end frameworks to enhance my skills further.
-            <br />
-            I am a highly motivated React Developer, ready to take on new challenges and contribute to building innovative and user-friendly applications.
-          </p>
         </section>
+
+        <Grid container className={styles.aboutMe} justifyContent={'space-between'}>
+          <Grid item xs={12} sm={12} md={4} lg={4}>
+            <img src="/jisoo-an.jpg" alt="jisoo" />
+          </Grid>
+          <Grid item xs={12} sm={12} md={8} lg={8}>
+            <section>
+              <h2>Frontend Developer</h2>
+              <p>As a Frontend developer with a couple of years of experience, 
+                I have a strong proficiency in building modern and responsive user interfaces. 
+                I am skilled in developing web applications using React/Next.js, JavaScript, GraphQL, HTML, and CSS.
+              </p>
+            </section>
+
+            <section>
+              <h2>UI/UX Designer</h2>
+              <p>Focused on creating visually appealing and user-friendly digital experiences. 
+                I conducted user research to understand target audiences and their preferences, 
+                and utilized wireframing and prototyping techniques to demonstrate design concepts.
+              </p>
+            </section>
+          </Grid>          
+        </Grid>
+
       </div>
     </Layout>
   )

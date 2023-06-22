@@ -8,6 +8,7 @@
 // font-family: 'Open Sans', sans-serif;
 
 * {
+  // cursor: crosshair;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -16,6 +17,15 @@
 html,
 body {
   font-family: 'Hahmlet', serif;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  pointer-events: none;
 }
 
 a {

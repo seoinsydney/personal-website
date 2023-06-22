@@ -2,11 +2,8 @@ import Link from 'next/link';
 import styles from '@/styles/components.module.scss'
 import { useState } from 'react';
 import { TbMenu2, TbArrowBadgeRight } from "react-icons/tb";
-// import { usePathname } from "next/navigation"
 
 export default function TopMenu () {
-
-    // const path = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -63,21 +60,13 @@ export default function TopMenu () {
                     {isMenuOpen && (
                         <nav className={styles.mobileMenu__close}>
                             <ul>
-                                <li>
-                                    <Link href="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link href="/project">Project</Link>
-                                </li>
-                                <li>
-                                    <Link href="/design">Design</Link>
-                                </li>
-                                <li>
-                                    <Link href="/blog">Blog</Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact">Contact</Link>
-                                </li>
+                            {
+                                links.map((list) => (
+                                    <li key={list.id}>
+                                        <Link href={list.href}>{list.text}</Link>
+                                    </li>
+                                ))
+                            }
                                 <li>
                                     <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
                                 </li>

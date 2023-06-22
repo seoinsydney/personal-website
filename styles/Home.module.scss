@@ -1,30 +1,33 @@
 .homeContainer {
   max-width: 1200px;
-  margin: 100px auto;
-  .hideMobile {
-    display: block;
-  }
-  section {
-    position: relative;
-    top: 20%;
-    margin: auto;
-    h1, p {
-      font-weight: 100;
-    }
-    h1 {
-      span {
-        background: -webkit-linear-gradient(#FF3EEC, #150013);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+  margin: 100px auto 0px auto;
+  .home {
+    margin-bottom: 100px;
+    section {
+      position: relative;
+      top: 20%;
+      margin: auto;
+      h1, p {
+        font-weight: 100;
+      }
+      h1 {
+        span {
+          background: -webkit-linear-gradient(#FF3EEC, #150013);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      p {
+        margin-top: 10px;
+        padding-left: 10px;
       }
     }
-    p {
-      margin-top: 10px;
-      padding-left: 10px;
+    img {
+      width: 100%;
     }
   }
-  img {
-    width: 100%;
+  .hideMobile {
+    display: block;
   }
 }
 .displayMobileHideDesktop {
