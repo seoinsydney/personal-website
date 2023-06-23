@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styles from '@/styles/pages.module.scss'
 import Layout from './layout';
 import BlogCard from 'components/blogCard';
@@ -39,8 +40,15 @@ export async function getStaticProps() {
 }
 
 export default function Blog({blogs}) {
+  const [shouldRender, setShouldRender] = useState(true);
+  useEffect(() => {
+    if (shouldRender) {
+      // Code to forcibly render the page on the client side
+      // Set shouldRender to false to prevent further re-rendering
+      setShouldRender(false);
+    }
+  }, [shouldRender]);
   const reversedBlogs = blogs.reverse();
-  console.log(reversedBlogs)
   return (
     <Layout>
       <div className={styles.pageContainer}>
