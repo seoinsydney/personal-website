@@ -27,7 +27,7 @@ const CursorEffect = () => {
       default: {
         x: mousePosition.x -14,
         y: mousePosition.y -70,
-        backgroundColor: "#FF3EEC",
+        backgroundColor: "#ff3eec91",
         height: '32px',
         width: '32px',
         borderRadius: '50%',

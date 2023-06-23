@@ -18,14 +18,10 @@ body {
   font-family: 'Hahmlet', serif;
 }
 
-// main {
-//   position: relative;
-//   z-index: 1;
-// }
-
-// img {
-//   pointer-events: none;
-// }
+h1, h2, h3, h4, h5, h6, p, a {
+  position: relative;
+  z-index: 1;
+}
 
 a {
   color: inherit;

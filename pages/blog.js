@@ -49,8 +49,7 @@ export default function Blog({blogs}) {
           Blog
           </h1>
         </section>
-        <Grid container 
-        className={styles.blogCardContainer}>
+        <Grid container justify-content="space-between">
           {
             reversedBlogs.map((blog) => (
               <BlogCard 

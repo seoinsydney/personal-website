@@ -10,10 +10,13 @@ export default function TopMenu () {
     };
     const links = [
         { id: 1, href: "/about", text: "About"},
-        { id: 2, href: "/project", text: "Project"},
-        { id: 3, href: "/design", text: "Design"},
-        { id: 4, href: "/blog", text: "Blog"},
-        { id: 5, href: "/contact", text: "Contact"}
+        { id: 2, href: "/blog", text: "Blog"},
+        { id: 3, href: "/project", text: "Project"},
+        { id: 4, href: "/design", text: "Design"},
+        { id: 5, href: "/contact", text: "Contact"},
+        { id: 6, href: "/Jisoo An - Resume.pdf", text: "Resume"},
+        { id: 7, href: "https://github.com/seoinsydney", text: "", src: "/akar-icons_github-outline-fill.png", alt: "icons_github", width: 23, height: 23 },
+        { id: 8, href: "https://www.linkedin.com/in/jisoo-an-35baa9173/", text: "", src: "/ph_linkedin-logo-thin.png", alt: "linkedin-logo", width: 25, height: 25 }
     ]
 
     return (
@@ -26,21 +29,17 @@ export default function TopMenu () {
                 </div>
                 <ul>
                     {
-                        links.map((list) => (
-                            <li key={list.id}>
-                                <Link href={list.href}>{list.text}</Link>
+                        links.map((menu) => (
+                            <li key={menu.id}>
+                                <Link href={menu.href}>{
+                                    menu.text === "" ?
+                                    <><img src={menu.src} alt={menu.alt} width={menu.width} height={menu.height} /></>
+                                    :
+                                    <>{menu.text}</>
+                                }</Link>
                             </li>
                         ))
                     }
-                    <li>
-                        <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/seoinsydney"><img src="/akar-icons_github-outline-fill.png" alt="icons_github" width="23" height="23" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jisoo-an-35baa9173/"><img src="/ph_linkedin-logo-thin.png" alt="linkedin-logo" width="25" height="25" /></a>
-                    </li>
                 </ul>
             </nav>
 
@@ -61,21 +60,17 @@ export default function TopMenu () {
                         <nav className={styles.mobileMenu__close}>
                             <ul>
                             {
-                                links.map((list) => (
-                                    <li key={list.id}>
-                                        <Link href={list.href}>{list.text}</Link>
+                                links.map((menu) => (
+                                    <li key={menu.id}>
+                                        <Link href={menu.href}>{
+                                            menu.text === "" ?
+                                            <><img src={menu.src} alt={menu.alt} width={menu.width} height={menu.height} /></>
+                                            :
+                                            <>{menu.text}</>
+                                        }</Link>
                                     </li>
                                 ))
                             }
-                                <li>
-                                    <a href="/Jisoo An - Resume.pdf" target="blank">Resume</a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/seoinsydney"><img src="/akar-icons_github-outline-fill.png" alt="icons_github" width="23" height="23" /></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/jisoo-an-35baa9173/"><img src="/ph_linkedin-logo-thin.png" alt="linkedin-logo" width="25" height="25" /></a>
-                                </li>
                             </ul>
                         </nav>
                     )}
