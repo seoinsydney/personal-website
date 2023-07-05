@@ -1,12 +1,12 @@
-import Head from 'next/head' //using head for SEO purpose
-import { Inter } from 'next/font/google'
+import Cursor from '../components/cursor';
 import styles from '@/styles/pages.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import { Grid } from '@mui/material';
 
 export default function Contact() {
   return (
     <Layout>
+      <Cursor />
       <div className={styles.pageContainer}>
         <section>
           <h1>Contact</h1>

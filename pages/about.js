@@ -1,11 +1,13 @@
 import styles from '@/styles/pages.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import { Grid } from '@mui/material';
-// import { motion, AnimatePresence } from "framer-motion"
+import Cursor from '../components/cursor';
 
 export default function About() {
+
   return (
     <Layout>
+      <Cursor />
       <div className={styles.pageContainer}>
         <section>
           <h1>

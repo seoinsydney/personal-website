@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import styles from '@/styles/components.module.scss'
 import { useState } from 'react';
+import styles from '@/styles/components.module.scss'
 import { TbMenu2, TbArrowBadgeRight } from "react-icons/tb";
 
 export default function TopMenu () {
@@ -8,6 +8,7 @@ export default function TopMenu () {
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
     const links = [
         { id: 1, href: "/about", text: "About"},
         { id: 2, href: "/blog", text: "Blog"},
@@ -26,6 +27,7 @@ export default function TopMenu () {
                     <Link href="/">
                         <img src="/JA-logo.png" alt="JA - logo" width="60" height="50" />
                     </Link>
+
                 </div>
                 <ul>
                     {

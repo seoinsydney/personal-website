@@ -1,5 +1,5 @@
 import styles from '@/styles/slug.module.scss'
-import Layout from './../layout';
+import Layout from '../../components/layout';
 import GoBackBtn from '@/components/goBackBtn';
 import { GraphQLClient, gql } from 'graphql-request';
 import { Grid } from '@mui/material';

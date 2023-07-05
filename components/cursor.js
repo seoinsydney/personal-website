@@ -32,16 +32,16 @@ const CursorEffect = () => {
         width: '32px',
         borderRadius: '50%',
       },
-      text: {
-        x: mousePosition.x -14,
-        y: mousePosition.y -70,
-        backgroundColor: "black",
-        height: '150px',
-        width: '150px',
-        borderRadius: '50%',
-        pointerEvents: 'none',
-        zIndex: 1,
-      },
+      // text: {
+      //   x: mousePosition.x -14,
+      //   y: mousePosition.y -70,
+      //   backgroundColor: "black",
+      //   height: '150px',
+      //   width: '150px',
+      //   borderRadius: '50%',
+      //   pointerEvents: 'none',
+      //   zIndex: 1,
+      // },
       exit: {
         opacity: 0,
         transition: { duration: 0.1 }

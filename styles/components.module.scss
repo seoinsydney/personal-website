@@ -24,10 +24,11 @@
                 a {
                     transition: .3s;
                     &:hover {
-                        background: -webkit-linear-gradient(#FF3EEC, #150013);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        transition: .3s;
+                        color: rgba(255, 62, 236, 0.57);
+                        // background: -webkit-linear-gradient(#FF3EEC, #150013);
+                        // -webkit-background-clip: text;
+                        // -webkit-text-fill-color: transparent;
+                        // transition: .3s;
                     }
                     img{
                         position:relative;

@@ -1,11 +1,12 @@
 import styles from '@/styles/Home.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import { Grid } from '@mui/material';
+import Cursor from '../components/cursor';
 
 export default function Home() {
-
   return (
     <Layout>
+      <Cursor />
       <div className={styles.homeContainer}>
       <Grid container className={styles.home}>
           <Grid item xs={12} md={5} lg={5}>

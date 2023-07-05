@@ -1,5 +1,5 @@
 import styles from '@/styles/pages.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import ProjectCard from 'components/projectCard';
 import { Grid } from '@mui/material';
 import { GraphQLClient, gql } from 'graphql-request';

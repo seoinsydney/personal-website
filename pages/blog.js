@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '@/styles/pages.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import BlogCard from 'components/blogCard';
 import { Grid } from '@mui/material';
 import { GraphQLClient, gql } from 'graphql-request';

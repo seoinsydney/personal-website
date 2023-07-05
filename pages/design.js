@@ -1,38 +1,125 @@
+// import { useState } from 'react';
+// import { motion, AnimatePresence } from "framer-motion"
 import styles from '@/styles/pages.module.scss'
-import Layout from './layout';
+import Layout from '../components/layout';
 import { TbArrowNarrowDown } from "react-icons/tb";
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 import { Grid } from '@mui/material';
 
 export default function Projects() {
+
+  const designList = [
+    {
+      id: 1,
+      title: 'Perfume Co.',
+      tag: 'E-commerce',
+      // text: 'Perfume.Co's web design portfolio embodies elegance and sophistication, featuring clean and minimalist layouts that allow the fragrances to take center stage. With captivating imagery, refined typography, and a harmonious color palette, the portfolio showcases the brand's artistry in creating handcrafted perfumes, providing visitors with a luxurious and immersive experience that celebrates the power of scent.',
+      image: '/Perfume.Co.png',
+      alt: 'blog cover photos',
+      webDesignPdf: '/Perfume.Co - combined.pdf',
+      styleGuidePdf: '/Style guide 1-merged.pdf',
+      brandConceptPdf: '/Perfume Co. Brand Concept.pdf',
+    },
+    {
+      id: 2,
+      title: 'Drew work',
+      tag: 'E-commerce',
+      image: '/drew work Home page.png',
+      alt: 'blog cover photos for Drew Work Handmade',
+      webDesignPdf: '/drew work-merged-compressed.pdf',
+      styleGuidePdf: '',
+      brandConceptPdf: '',
+    },
+    {
+      id: 3,
+      title: 'Weather App',
+      tag: 'Mobile Application',
+      image: '/weather-app-dark.png',
+      alt: 'blog cover photos',
+      webDesignPdf: '/portfolio-dark-merged.pdf',
+      styleGuidePdf: '',
+      brandConceptPdf: '',
+    },
+    {
+      id: 4,
+      title: 'Artist',
+      tag: 'Portfolio Website',
+      image: '/artist.png',
+      alt: 'blog cover photos',
+      webDesignPdf: '/aneta-merged-compressed.pdf',
+      styleGuidePdf: '',
+      brandConceptPdf: '',
+    },
+    // {
+    //   id: 5,
+    //   title: 'Nature',
+    //   tag: 'Weather Application',
+    //   image: '/artist.png',
+    //   alt: 'blog cover photos',
+    //   webDesignPdf: '/Perfume.Co - combined.pdf',
+    //   styleGuidePdf: '',
+    //   brandConceptPdf: '',
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Home Repair',
+    //   tag: 'Weather Application',
+    //   image: '/artist.png',
+    //   alt: 'blog cover photos',
+    //   webDesignPdf: '/Perfume.Co - combined.pdf',
+    //   styleGuidePdf: '',
+    //   brandConceptPdf: '',
+    // },
+  ]
+
   return (
     <Layout>
         <div className={styles.pageContainer}>
             <section>
-                <h1>Design</h1>
+              <h1>Portfolio Design</h1>
             </section>
-          <section>
-            <h2>Portfolio Design</h2>
-          </section>
-            <Grid container className={styles.webDesign}>
-              <Grid item xs={12} sm={12} md={5} lg={5}>
-                  <img src='/Perfume.Co.png' 
-                  alt='blog cover photos' 
-                  width="954" height="637" />
-              </Grid>
-              <Grid item xs={12} sm={12} md={7} lg={7}>
-                <section>
-                  <h4>Perfume Co.</h4>
-                  <p>Perfume.Co's web design portfolio embodies elegance and sophistication, featuring clean and minimalist layouts that allow the fragrances to take center stage. With captivating imagery, refined typography, and a harmonious color palette, the portfolio showcases the brand's artistry in creating handcrafted perfumes, providing visitors with a luxurious and immersive experience that celebrates the power of scent.</p>
-                  <ul>
-                    <li><a href="/Perfume.Co - combined.pdf" target="blank">Web Design</a></li>
-                    <li><a href="/Style guide 1-merged.pdf" target="blank">Style Guide</a></li>
-                    <li><a href="/Perfume Co. Brand Concept.pdf" target="blank">Brand Concept</a></li>
-                  </ul>
-                </section>
-              </Grid>
+            <Grid container 
+            className={styles.webDesign} 
+            spacing={1}
+            >
+              {
+                designList.map( design => 
+                <Grid item xs={12} sm={6} md={4} lg={4}
+                key={design.id}
+                className={styles.webDesign__card}
+                >
+                  <div className={styles.webDesign__layout}>
+                  <img src={design.image} 
+                  alt={design.alt}
+                  />
+                  <section>
+                    <h6>{design.tag}</h6>
+                    <h4>{design.title}</h4>
+                    <p>{design.text}</p>
+                    <ul>
+                      <li><a href={design.webDesignPdf} >Design</a></li>
+                      {
+                        design.styleGuidePdf === "" ?
+                        <></>
+                        :
+                        <li><a href={design.styleGuidePdf} >Style Guide</a></li>
+                      }
+                      {
+                        design.brandConceptPdf === "" ?
+                        <></>
+                        :
+                        <li><a href={design.brandConceptPdf} >Brand Concept</a></li>
+                      }
+                      
+                    </ul>
+                  </section>
+                  </div>
+                </Grid>
+                )
+              }
             </Grid>
 
-            <div className={styles.figmaDesign}>
+            {/* <div className={styles.figmaDesign}>
               <section>
                 <h4>Mobile Weather App</h4>
                 <p>Explore and interact with the screen by clicking around!</p>
@@ -55,7 +142,8 @@ export default function Projects() {
                 width="300" height="600" 
                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIjhZDncX3Atl5YziMjQPFF%2FWeb-Design%3Ftype%3Ddesign%26node-id%3D549-124%26scaling%3Dscale-down%26page-id%3D539%253A39%26starting-point-node-id%3D549%253A124" 
                 allowfullscreen></iframe> 
-            </div>
+            </div> */}
+
         </div>
 
     </Layout>

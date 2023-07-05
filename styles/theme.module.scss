@@ -1,0 +1,40 @@
+.switchContainer {
+    .darkMode {
+        color:  #FFFFFF;
+        background-color: #1E1E1E!important;
+        html, main {
+            background-color: #1E1E1E!important;
+        }
+        a {
+            color: #ffffff;
+        }
+        h1 {
+            span {
+                background: -webkit-linear-gradient(#FF3EEC, #f6f6f6)!important;
+                -webkit-background-clip: text!important;
+                -webkit-text-fill-color: transparent!important;
+            }
+        }
+        p {
+            color:  #aaaaaa;
+        }
+        .components_blogCard{
+            box-shadow: none;
+        }
+    }
+    
+    .lightMode {
+        color: #212121;
+        background-color: #ffffff;
+    }
+    .MuiFormControlLabel-root {
+
+    }
+    .MuiFormControlLabel-labelPlacementEnd {
+
+    }
+    .css-jzcd7z-MuiFormControlLabel-root {
+
+    }
+  }
+
