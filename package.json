@@ -17,9 +17,9 @@
     "eslint-config-next": "13.2.4",
     "framer-motion": "^10.12.16",
     "graphql-request": "^5.2.0",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.4.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-map-gl": "^7.0.25",
     "sass": "^1.60.0"
