@@ -64,12 +64,12 @@ export default function Projects() {
       id: 6,
       title: 'Recipe',
       tag: 'Brochure',
-      image: '/paper frame-whitebgr.png',
+      image: '/Kimchi Pancake paper frame-whitebgr.png',
       alt: 'blog cover photos',
-      webDesignPdf: '/Kimchi Pancake.pdf',
+      webDesignPdf: '/Kimchi recipes-merged-compressed.pdf',
       styleGuidePdf: '',
       brandConceptPdf: '',
-    },
+    }
   ]
 
   return (
