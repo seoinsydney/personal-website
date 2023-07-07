@@ -2,8 +2,8 @@
 // import { motion, AnimatePresence } from "framer-motion"
 import styles from '@/styles/pages.module.scss'
 import Layout from '../components/layout';
-import { TbArrowNarrowDown } from "react-icons/tb";
-import AttachFileIcon from '@mui/icons-material/AttachFile';
+// import { TbArrowNarrowDown } from "react-icons/tb";
+// import AttachFileIcon from '@mui/icons-material/AttachFile';
 import { Grid } from '@mui/material';
 
 export default function Projects() {
@@ -60,92 +60,64 @@ export default function Projects() {
       styleGuidePdf: '',
       brandConceptPdf: '',
     },
-    // {
-    //   id: 6,
-    //   title: 'Home Repair',
-    //   tag: 'Weather Application',
-    //   image: '/artist.png',
-    //   alt: 'blog cover photos',
-    //   webDesignPdf: '/Perfume.Co - combined.pdf',
-    //   styleGuidePdf: '',
-    //   brandConceptPdf: '',
-    // },
+    {
+      id: 6,
+      title: 'Recipe',
+      tag: 'Brochure',
+      image: '/paper frame-whitebgr.png',
+      alt: 'blog cover photos',
+      webDesignPdf: '/Kimchi Pancake.pdf',
+      styleGuidePdf: '',
+      brandConceptPdf: '',
+    },
   ]
 
   return (
     <Layout>
         <div className={styles.pageContainer}>
-            <section>
-              <h1>Portfolio Design</h1>
-            </section>
-            <Grid container 
-            className={styles.webDesign} 
-            spacing={1}
-            >
-              {
-                designList.map( design => 
-                <Grid item xs={12} sm={6} md={4} lg={4}
-                key={design.id}
-                className={styles.webDesign__card}
-                >
-                  <div className={styles.webDesign__layout}>
-                  <img src={design.image} 
-                  alt={design.alt}
-                  />
-                  <section>
-                    <h6>{design.tag}</h6>
-                    <h4>{design.title}</h4>
-                    <p>{design.text}</p>
-                    <ul>
-                      <li><a href={design.webDesignPdf} >Design</a></li>
-                      {
-                        design.styleGuidePdf === "" ?
-                        <></>
-                        :
-                        <li><a href={design.styleGuidePdf} >Style Guide</a></li>
-                      }
-                      {
-                        design.brandConceptPdf === "" ?
-                        <></>
-                        :
-                        <li><a href={design.brandConceptPdf} >Brand Concept</a></li>
-                      }
-                      
-                    </ul>
-                  </section>
-                  </div>
-                </Grid>
-                )
-              }
-            </Grid>
-
-            {/* <div className={styles.figmaDesign}>
-              <section>
-                <h4>Mobile Weather App</h4>
-                <p>Explore and interact with the screen by clicking around!</p>
-                <br />
-                <h6>Please click <b>"Web Design"</b> to see more designs</h6>
-                <TbArrowNarrowDown />
-              </section>
-              <iframe 
-                className={styles.figmaDesign__desktop}
-                width="750" height="600" 
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIjhZDncX3Atl5YziMjQPFF%2FWeb-Design%3Ftype%3Ddesign%26node-id%3D549-124%26scaling%3Dscale-down%26page-id%3D539%253A39%26starting-point-node-id%3D549%253A124" 
-                allowfullscreen></iframe>  
-              <iframe 
-                className={styles.figmaDesign__tablet}
-                width="400" height="600" 
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIjhZDncX3Atl5YziMjQPFF%2FWeb-Design%3Ftype%3Ddesign%26node-id%3D549-124%26scaling%3Dscale-down%26page-id%3D539%253A39%26starting-point-node-id%3D549%253A124" 
-                allowfullscreen></iframe> 
-              <iframe 
-                className={styles.figmaDesign__mobile}
-                width="300" height="600" 
-                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIjhZDncX3Atl5YziMjQPFF%2FWeb-Design%3Ftype%3Ddesign%26node-id%3D549-124%26scaling%3Dscale-down%26page-id%3D539%253A39%26starting-point-node-id%3D549%253A124" 
-                allowfullscreen></iframe> 
-            </div> */}
-
+          <section>
+            <h1>Portfolio Design</h1>
+          </section>
+          <Grid container 
+          className={styles.webDesign} 
+          spacing={1}
+          >
+            {
+              designList.map( design => 
+              <Grid item xs={12} sm={6} md={4} lg={4}
+              key={design.id}
+              className={styles.webDesign__card}
+              >
+                <div className={styles.webDesign__layout}>
+                <img src={design.image} 
+                alt={design.alt}
+                />
+                <section>
+                  <h6>{design.tag}</h6>
+                  <h4>{design.title}</h4>
+                  <p>{design.text}</p>
+                  <ul>
+                    <li><a href={design.webDesignPdf} >Design</a></li>
+                    {
+                      design.styleGuidePdf === "" ?
+                      <></>
+                      :
+                      <li><a href={design.styleGuidePdf} >Style Guide</a></li>
+                    }
+                    {
+                      design.brandConceptPdf === "" ?
+                      <></>
+                      :
+                      <li><a href={design.brandConceptPdf} >Brand Concept</a></li>
+                    }
+                  </ul>
+                </section>
+                </div>
+              </Grid>
+              )
+            }
+          </Grid>
         </div>
-
     </Layout>
   )
 }
