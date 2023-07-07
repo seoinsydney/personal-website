@@ -34,7 +34,7 @@ export default function Projects() {
       id: 3,
       title: 'Weather App',
       tag: 'Mobile Application',
-      image: '/weather-app-dark.png',
+      image: '/portfolio-dark.png',
       alt: 'blog cover photos',
       webDesignPdf: '/portfolio-dark-merged.pdf',
       styleGuidePdf: '',
