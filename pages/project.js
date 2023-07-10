@@ -43,6 +43,9 @@ const graphcms = new GraphQLClient(
   }
 
 export default function Projects({projects}) {
+
+  const sortedData = projects.sort((a, b) => new Date(b.datePublished) - new Date(a.datePublished));
+
   return (
     <Layout>
       <div className={styles.pageContainer}>

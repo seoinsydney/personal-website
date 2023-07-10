@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styles from '@/styles/pages.module.scss'
 import Layout from '../components/layout';
 import BlogCard from 'components/blogCard';
@@ -40,15 +39,9 @@ export async function getStaticProps() {
 }
 
 export default function Blog({blogs}) {
-  const [shouldRender, setShouldRender] = useState(true);
-  useEffect(() => {
-    if (shouldRender) {
-      // Code to forcibly render the page on the client side
-      // Set shouldRender to false to prevent further re-rendering
-      setShouldRender(false);
-    }
-  }, [shouldRender]);
-  const reversedBlogs = blogs.reverse();
+
+  const sortedData = blogs.sort((a, b) => new Date(b.datePublished) - new Date(a.datePublished));
+
   return (
     <Layout>
       <div className={styles.pageContainer}>
@@ -59,7 +52,7 @@ export default function Blog({blogs}) {
         </section>
         <Grid container justify-content="space-between">
           {
-            reversedBlogs.map((blog) => (
+            blogs.map((blog) => (
               <BlogCard 
               blogTitle={blog.blogTitle}
               coverPhoto={blog.coverPhoto} 
