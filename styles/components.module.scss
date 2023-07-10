@@ -4,6 +4,10 @@
     .logo {
         float: left;
     }
+    .active {
+        color: rgb(134, 134, 134);
+        border-bottom: solid 1px rgb(134, 134, 134) ;
+    }
     .desktopMenu {
         display: flex;
         justify-content: space-between;
@@ -21,14 +25,11 @@
                 float: right;
                 font-size: 18px;
                 transform: rotate(-180deg);
+                text-transform: capitalize;
                 a {
                     transition: .3s;
                     &:hover {
-                        color: rgba(255, 62, 236, 0.57);
-                        // background: -webkit-linear-gradient(#FF3EEC, #150013);
-                        // -webkit-background-clip: text;
-                        // -webkit-text-fill-color: transparent;
-                        // transition: .3s;
+                        color: rgb(203, 33, 186);
                     }
                     img{
                         position:relative;
