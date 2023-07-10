@@ -11,10 +11,10 @@ export default function ProjectCard({
     hushtags,
 }){
     return(
-        <Grid item xs={12} md={6} lg={4} className={styles.projectCard}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={styles.projectCard}>
             <Link href={'/project/' + slug}>
                 <div className={styles.imgContainer}>
-                    <img src={photo[0].url} alt='blog cover photos' width="365" height="275" />
+                    <img src={photo[0].url} alt='blog cover photos' />
                 </div>
                 <section className={styles.text}>
                     <h5>{title}</h5>
