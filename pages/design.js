@@ -62,7 +62,7 @@ export default function Projects() {
     },
     {
       id: 6,
-      title: 'Recipe',
+      title: 'Recipes',
       tag: 'Brochure',
       image: '/Kimchi Pancake paper frame-whitebgr.png',
       alt: 'blog cover photos',
