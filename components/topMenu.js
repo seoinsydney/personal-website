@@ -66,7 +66,9 @@ export default function TopMenu () {
                             <ul>
                             {
                                 links.map((menu) => (
-                                    <li key={menu.id}>
+                                    <li key={menu.id}
+                                    className={currentPath === menu.href || currentPath ===  menu.href + '/[slug]' ? styles.mobileActive : ''}
+                                    >
                                         <Link href={menu.href}>{
                                             menu.text === "" ?
                                             <><img src={menu.src} alt={menu.alt} width={menu.width} height={menu.height} /></>
