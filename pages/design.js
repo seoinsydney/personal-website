@@ -1,9 +1,5 @@
-// import { useState } from 'react';
-// import { motion, AnimatePresence } from "framer-motion"
 import styles from '@/styles/pages.module.scss'
 import Layout from '../components/layout';
-// import { TbArrowNarrowDown } from "react-icons/tb";
-// import AttachFileIcon from '@mui/icons-material/AttachFile';
 import { Grid } from '@mui/material';
 
 export default function Projects() {
@@ -42,11 +38,11 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: 'Artist',
-      tag: 'Portfolio Website',
-      image: '/artist.png',
+      title: 'See the street',
+      tag: 'One Page Website',
+      image: '/see the street home.png',
       alt: 'blog cover photos',
-      webDesignPdf: '/aneta-merged-compressed.pdf',
+      webDesignPdf: '/CREATIVE STUDIO-compressed.pdf',
       styleGuidePdf: '',
       brandConceptPdf: '',
     },
@@ -69,7 +65,17 @@ export default function Projects() {
       webDesignPdf: '/Kimchi recipes-merged-compressed.pdf',
       styleGuidePdf: '',
       brandConceptPdf: '',
-    }
+    },
+    {
+      id: 7,
+      title: 'Artist',
+      tag: 'Portfolio Website',
+      image: '/artist.png',
+      alt: 'blog cover photos',
+      webDesignPdf: '/aneta-merged-compressed.pdf',
+      styleGuidePdf: '',
+      brandConceptPdf: '',
+    },
   ]
 
   return (

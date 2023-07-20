@@ -12,11 +12,11 @@ export default function TopMenu () {
 
     const links = [
         { id: 1, href: "/about", text: "about"},
-        { id: 2, href: "/blog", text: "blog"},
         { id: 3, href: "/project", text: "project"},
         { id: 4, href: "/design", text: "design"},
+        { id: 2, href: "/blog", text: "blog"},
         { id: 5, href: "/contact", text: "contact"},
-        { id: 6, href: "/Jisoo An - Resume.pdf", text: "resume"},
+        { id: 6, href: "/Resume-Front End Developer-Jisoo An.pdf", text: "resume"},
         { id: 7, href: "https://github.com/seoinsydney", text: "", src: "/akar-icons_github-outline-fill.png", alt: "icons_github", width: 23, height: 23 },
         { id: 8, href: "https://www.linkedin.com/in/jisoo-an-35baa9173/", text: "", src: "/ph_linkedin-logo-thin.png", alt: "linkedin-logo", width: 25, height: 25 }
     ]

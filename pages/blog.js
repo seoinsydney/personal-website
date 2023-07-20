@@ -23,7 +23,8 @@ const QUERY = gql`
       pdf {
         url
       },
-      datePublished
+      datePublished,
+      description
     }
   }
 `
@@ -39,18 +40,14 @@ export async function getStaticProps() {
 }
 
 export default function Blog({blogs}) {
-
   const sortedData = blogs.sort((a, b) => new Date(b.datePublished) - new Date(a.datePublished));
-
   return (
     <Layout>
       <div className={styles.pageContainer}>
         <section>
-          <h1>
-          Blog
-          </h1>
+          <h1>Blog</h1>
         </section>
-        <Grid container justify-content="space-between">
+        <Grid container>
           {
             blogs.map((blog) => (
               <BlogCard 
@@ -59,6 +56,7 @@ export default function Blog({blogs}) {
               key={blog.id}
               datePublished={blog.datePublished}
               slug={blog.slug}
+              description={blog.description}
               />
             ))
           }

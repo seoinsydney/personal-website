@@ -6,10 +6,12 @@ export default function BlogCard({
     blogTitle,
     coverPhoto, 
     datePublished, 
-    slug
+    slug,
+    description
 }){
+
     return(
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item xs={12} md={12} lg={12}>
             <div className={styles.blogCard}>
             <Link href={'/blog/' + slug}>
                 <div className={styles.blogImgContainer}>
@@ -17,9 +19,12 @@ export default function BlogCard({
                     alt='blog cover photos' 
                     width="544" height="300" />
                 </div>
-                <section className={styles.text}>
-                    <h5>{blogTitle}</h5>
+                <section>
                     <h6>{datePublished}</h6>
+                    <h5>{blogTitle}</h5>
+                    {
+                        description ? <p>{description.slice(0, 200)}...</p> : <></>
+                    }
                 </section>
             </Link>
             </div>

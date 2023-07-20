@@ -23,7 +23,8 @@ const graphCms = new GraphQLClient(
         pdf {
           url
         },
-        datePublished
+        datePublished,
+        description
       }
     }
   `

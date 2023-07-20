@@ -150,21 +150,26 @@
 }
 
 .blogCard {
-    margin: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto 70px auto;
     padding-bottom: 10px;
-    border-radius: 15px;
-    box-shadow: 4px 4px 10px #cdcdcd;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px #e5e5e5;
     .blogImgContainer {
         text-align: center;
         img {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             width: 100%;
             object-fit: cover;
         }
     }
-    .text {
+    section {
         margin: 20px;
+        h5 {
+            margin-bottom:10px;
+        }
         h6 {
             margin: 5px 0;
         }
@@ -230,6 +235,9 @@
             img {
                 height: 170px;
             }
+        }
+        section {
+            margin: 5px;
         }
     }
     .pageContainer {
