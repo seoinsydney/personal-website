@@ -42,7 +42,7 @@ export default function Projects() {
       tag: 'One Page Website',
       image: '/see the street home.png',
       alt: 'blog cover photos',
-      webDesignPdf: '/CREATIVE STUDIO-compressed.pdf',
+      webDesignPdf: '/See the street-compressed.pdf',
       styleGuidePdf: '',
       brandConceptPdf: '',
     },
