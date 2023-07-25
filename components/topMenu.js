@@ -12,8 +12,8 @@ export default function TopMenu () {
 
     const links = [
         { id: 1, href: "/about", text: "about"},
-        { id: 2, href: "/project", text: "project"},
-        { id: 3, href: "/design", text: "design"},
+        { id: 2, href: "/project", text: "projects"},
+        { id: 3, href: "/design", text: "designs"},
         { id: 4, href: "/blog", text: "blog"},
         { id: 5, href: "/contact", text: "contact"},
         { id: 6, href: "/Resume-Front End Developer-Jisoo An.pdf", text: "resume"},

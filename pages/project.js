@@ -51,7 +51,7 @@ export default function Projects({projects}) {
       <div className={styles.pageContainer}>
         <section>
           <h1>
-          Project
+          Projects
           </h1>
         </section>
         <Grid container spacing={2} className={styles.cardContainer}>

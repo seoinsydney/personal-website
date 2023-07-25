@@ -82,7 +82,7 @@ export default function Projects() {
     <Layout>
         <div className={styles.pageContainer}>
           <section>
-            <h1>Portfolio Design</h1>
+            <h1>Portfolio Designs</h1>
           </section>
           <Grid container 
           className={styles.webDesign} 
