@@ -7,14 +7,20 @@
     }
     img {
         object-fit: cover;
-        width: 95%;
+        width: 100%;
+        box-shadow: 4px 4px 10px #e5e5e5;
+        height: 300px;
+    }
+    h4 {
+        font-weight: 600;
+        margin: 25px 0 5px 0;
     }
     p {
         line-height: 1.8;
         font-weight: normal;
         span {
             font-size: 16px;
-            color:#747474 ;
+            color:#747474;
             margin-right: 20px;
         }
     }
@@ -24,9 +30,13 @@
     }
     .tagFlex {
         display: flex;
+        margin-bottom: 20px;
     }
     .projectDetails {
         margin: 30px 0;
+        hr {
+            margin: 20px 0;
+        }
     }
 }
 

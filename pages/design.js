@@ -100,7 +100,7 @@ export default function Projects() {
                 />
                 <section>
                   <h6>{design.tag}</h6>
-                  <h4>{design.title}</h4>
+                  <h5>{design.title}</h5>
                   <p>{design.text}</p>
                   <ul>
                     <li><a href={design.webDesignPdf} >Design</a></li>

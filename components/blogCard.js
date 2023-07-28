@@ -23,7 +23,7 @@ export default function BlogCard({
                     <h6>{datePublished}</h6>
                     <h5>{blogTitle}</h5>
                     {
-                        description ? <p>{description.slice(0, 200)}...</p> : <></>
+                        description ? <p>{description.slice(0, 140)}... <span>Read more</span></p> : <></>
                     }
                 </section>
             </Link>

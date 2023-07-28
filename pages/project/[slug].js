@@ -2,7 +2,7 @@ import styles from '@/styles/slug.module.scss'
 import Layout from '../../components/layout';
 import { GraphQLClient, gql } from 'graphql-request';
 import GoBackBtn from '@/components/goBackBtn';
-import { Grid } from '@mui/material';
+import { Grid, Divider, spacing  } from '@mui/material';
 
 
 const graphCms = new GraphQLClient(
@@ -68,19 +68,28 @@ export default function ProjectDetails({project}) {
         <div className={styles.slugContainer}>
           <h1>Project</h1>
           <Grid container className={styles.projectDetails}>
+
             <Grid item xs={12} md={6} lg={6}>
-              <img src={project.photo[0].url} alt={project.title + 'cover photo'} width={500} height={350} />
+              <img src={project.photo[0].url} 
+              alt={project.title + 'cover photo'} />
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
-              <h2>{project.title}</h2>
-              <p><span>{project.datePublished}</span></p>
-              <div className={styles.tagFlex} >
-              {
-                project.hushtags.map((tag) => (
-                  <p key={tag.id}><span>{tag.tag}</span></p>
-                ))
-              }
-              </div>
+
+            <Grid item xs={12} md={12} lg={12}>
+            <Divider variant="middle"  />
+            </Grid>
+
+            <Grid item xs={12} md={12} lg={12}>
+              <section>
+                <h2>{project.title}</h2>
+                <p><span>{project.datePublished}</span></p>
+                <div className={styles.tagFlex} >
+                {
+                  project.hushtags.map((tag) => (
+                    <p key={tag.id}><span>{tag.tag}</span></p>
+                  ))
+                }
+                </div>
+              </section>
               <div className={styles.content} dangerouslySetInnerHTML={{__html: project.richtext.html}}></div>
               <GoBackBtn />
             </Grid>

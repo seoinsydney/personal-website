@@ -4,7 +4,6 @@ import { Grid } from '@mui/material';
 
 export default function ProjectCard({
     title, 
-    // author, 
     photo, 
     datePublished, 
     slug,
