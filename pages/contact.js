@@ -2,6 +2,7 @@ import Cursor from '../components/cursor';
 import styles from '@/styles/pages.module.scss'
 import Layout from '../components/layout';
 import { Grid } from '@mui/material';
+import PrimaryButton from '../components/primaryButton';
 
 export default function Contact() {
   return (
@@ -22,9 +23,9 @@ export default function Contact() {
               </p>
               <p><span>Email: seosydneyweb@gmail.com</span></p>
             </section>
-            <button type="button">
+            <PrimaryButton>
               <a href="https://www.linkedin.com/in/jisoo-an-35baa9173/">LinkedIn</a>
-            </button>
+            </PrimaryButton>
           </Grid>
           <Grid item xs={12} md={7} lg={7} order={{ xs: 1, sm: 1, md: 2 }}>
             <img src='/smaller-contact_50.jpg' alt='contact image' width="645" height="430" />

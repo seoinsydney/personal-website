@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import styles from '@/styles/components.module.scss'
-import { TbMenu2, TbArrowBadgeRight } from "react-icons/tb";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function TopMenu () {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
     const links = [
         { id: 1, href: "/about", text: "about"},
         { id: 2, href: "/project", text: "projects"},
@@ -20,7 +20,6 @@ export default function TopMenu () {
         { id: 7, href: "https://github.com/seoinsydney", text: "", src: "/akar-icons_github-outline-fill.png", alt: "icons_github", width: 23, height: 23 },
         { id: 8, href: "https://www.linkedin.com/in/jisoo-an-35baa9173/", text: "", src: "/ph_linkedin-logo-thin.png", alt: "linkedin-logo", width: 25, height: 25 }
     ]
-
     const router = useRouter();
     const currentPath = router.pathname;
 
@@ -48,16 +47,15 @@ export default function TopMenu () {
                 </ul>
             </nav>
 
-
             <div className={styles.mobileMenu}>
                 <div className={styles.logo}>
                     <Link href="/"><img src="/JA-logo.png" alt="JA - logo" width="60" height="50" /></Link>
                 </div>
                 <button onClick={handleMenuClick}>
                     {isMenuOpen ? 
-                        <TbArrowBadgeRight />
+                        <CloseIcon />
                         :
-                        <TbMenu2 />
+                        <MenuIcon />
                     }
                 </button>
                 <div>
