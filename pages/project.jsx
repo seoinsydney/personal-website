@@ -74,7 +74,7 @@ export default function Projects({projects}) {
           <h1>Projects</h1>
         </section>
 
-        <div className={styles.filterProjects}>
+        {/* <div className={styles.filterProjects}>
           <div onClick={toggleIcon}>
             {
               openFilter ?
@@ -86,7 +86,7 @@ export default function Projects({projects}) {
           <div className={styles.filterProjects__checkbox}>
             { openFilter ? <>{category}</> : <></> }
           </div>
-        </div>
+        </div> */}
 
         <Grid container className={styles.cardContainer}>
           {
