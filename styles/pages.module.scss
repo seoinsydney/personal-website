@@ -51,7 +51,6 @@
             }
         }
     }
-
     .webDesign {
         margin: 0 auto 50px auto;
         text-align: center;
@@ -89,7 +88,6 @@
             }
         }
     }
-
     .contact {
         p {
             span {
@@ -103,7 +101,76 @@
         button {
             margin: 20px 0;
         }
+        section {
+            margin: 0  34px 20px 34px;
+        }
+        figure {
+            text-align: center;
+            img {
+                height: auto;
+                max-width: 150px;
+                display: block;
+                margin: 50px 34px;
+                object-fit: cover;
+            }
+        }
     }
+}
+.colorChangingBackground {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+.colorfulShapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg, #2196F3, #E91E63);
+    animation: changeColors 10s infinite;
+}
+@keyframes changeColors {
+    0%, 25% { background: linear-gradient(135deg, #2196F3, #E91E63); }
+    50%, 75% { background: linear-gradient(135deg, #E91E63, #FFEB3B); }
+    100% { background: linear-gradient(135deg, #FFEB3B, #2196F3); }
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.hideMobile {
+display: block;
+}
+.hideDesktop {
+display: none;
+}
+.footerContainer {
+    background: #262626;
+    .footerWrapper {
+        
+        p {
+            color: #939393;
+        }
+        a {
+            color: #939393;
+            transition: 0.3s;
+            &:hover {
+            color: #ffffff;
+            }
+        }
+        h6 {
+            color: #e1e1e1;
+        }
+
+    }
+
 }
 
 /* Tablet */
@@ -111,6 +178,13 @@
     .pageContainer {
         padding: 10px;
         margin: 0;
+        .contact {
+            figure {
+                img {
+                    margin: 10px auto;
+                }
+            }
+        }
         .aboutMe {
             img {
                 top: 0;
@@ -152,6 +226,12 @@
 
 /* Mobile */
 @media (max-width: 425px) {
+    .hideMobile {
+        display: none;
+    }
+    .hideDesktop {
+        display: block;
+    }
     .pageContainer {
         padding: 10px;
         margin: 0;

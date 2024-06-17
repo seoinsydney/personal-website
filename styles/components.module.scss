@@ -14,7 +14,7 @@
     .desktopMenu {
         display: flex;
         justify-content: space-between;
-        padding: 0 50px;
+        padding: 30px 50px;
         ul {
             list-style-type: none;
             margin: 0;
@@ -97,7 +97,6 @@
                         background: -webkit-linear-gradient(#FF3EEC, #150013);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        transition: .3s;
                     }
                 }
             }
@@ -106,14 +105,24 @@
 }
 .primaryButton {
     button {
-        display: flex;
-        padding: 10px 20px;
-        background-color: inherit;
-        border: 1px solid gray;
+        background: none;
         border-radius: 5px;
-        font-weight: bold;
-        font-family: "Open Sans", sans-serif;
-        letter-spacing: 5px;
+        border: solid 1px #a6a6a6;
+        padding: 15px 25px;
+        margin: 20px 0;
+        font-family: system-ui;
+        text-transform: capitalize;
+        font-weight: 400;
+        transition: 0.3s;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        // &:hover {
+        //     background: #262626!important;
+        //     color: #ffffff!important;
+        // }
     }
 }
 .functionalButton {
@@ -178,7 +187,7 @@
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 4px 4px 10px #e5e5e5;
+            box-shadow: 8px 8px 24px #e5e5e5;
         }
     }
     .text {
@@ -186,7 +195,7 @@
         margin: auto;
         text-align: left;
         h5 {
-            font-weight: 400;
+            // font-weight: 400;
             font-family: 'Hahmlet', serif;
         }
         h6, p {
@@ -208,6 +217,12 @@
             color: #2c2c2c;
         }
     }
+}
+.hideMobile {
+display: block;
+}
+.displayMobileHideDesktop {
+display: none;
 }
 
 /* Tablet */

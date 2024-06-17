@@ -29,20 +29,21 @@ a {
 }
 
 h1 {
-  font-family: 'Hahmlet', serif;
+  font-family: system-ui;
   font-size: 42px;
   font-weight: 200;
   margin: 0;
   padding: 0 10px;
 }
 h2 {
-  font-family: 'Hahmlet', serif;
-  font-size: 32px;
-  font-weight: 200;
+  font-family: system-ui;
+  font-size: 30px;
+  line-height: 2;
+  font-weight: 400;
   margin: 0;
 }
 h3 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 200;
   margin: 0;
 }
@@ -52,20 +53,38 @@ h4 {
 }
 h5 {
   font-size: 20px;
+  font-weight: 400;
   margin: 0;
 }
 h6 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 200;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 2;
   margin: 0;
   color: #000000;
   font-weight: normal;
   font-family: system-ui;
+}
+.primary-button {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  color: white;
+}
+.secondary-button {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  color: white;
+}
+.hideMobile {
+  display: block;
+}
+.displayMobileHideDesktop {
+  display: none;
 }
 
 /* tablet */
