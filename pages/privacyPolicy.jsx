@@ -1,14 +1,15 @@
 // pages/privacy-policy.js
-
+import Layout from '../components/layout';
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 
 const PrivacyPolicy = () => {
   const effectiveDate = 'June 1, 2024'; // Set your effective date here
-  const yourName = 'John Doe'; // Set your name here
-  const email = 'your.email@example.com'; // Set your contact email here
+  const yourName = 'Jisoo An'; // Set your name here
+  const email = 'seosydneyweb@gmail.com'; // Set your contact email here
 
   return (
+    <Layout>
     <Container maxWidth="md">
       <Box mt={4} mb={4}>
         <Typography variant="h4" gutterBottom>
@@ -113,6 +114,7 @@ const PrivacyPolicy = () => {
         </Typography>
       </Box>
     </Container>
+    </Layout>
   );
 };
 

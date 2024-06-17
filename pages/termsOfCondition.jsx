@@ -1,5 +1,5 @@
 // pages/terms-of-service.js
-
+import Layout from '../components/layout';
 import React from 'react';
 import { Container, Typography, Box } from '@mui/material';
 
@@ -8,10 +8,11 @@ const TermsOfService = () => {
   const yourName = 'Jisoo An'; // Set your name here
   const depositPercentage = 50; // Set your deposit percentage here
   const revisionNumber = 1; // Set your number of included revisions here
-  const governingLaw = 'sydney, Australia'; // Set your governing law state/country here
+  const governingLaw = 'Sydney, Australia'; // Set your governing law state/country here
   const email = 'seosydneyweb@gmail.com'; // Set your contact email here
 
   return (
+    <Layout>
     <Container maxWidth="md">
       <Box mt={4} mb={4}>
         <Typography variant="h4" gutterBottom>
@@ -118,6 +119,7 @@ const TermsOfService = () => {
         </Typography>
       </Box>
     </Container>
+    </Layout>
   );
 };
 
