@@ -72,7 +72,7 @@ export default function BlogDetails({blog}) {
             <Grid item xs={12} md={12} lg={12}>
               <section>
                 <h2>{blog.blogTitle}</h2>
-                <p><span>{blog.datePublished}</span></p>
+                {/* <p><span>{blog.datePublished}</span></p> */}
               </section>
               <div className={styles.content} 
               dangerouslySetInnerHTML={{__html: blog.content.html}}></div>
